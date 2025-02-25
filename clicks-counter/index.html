@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upvotes 1 Counter</title>
+  </head>
+  <body>
+    <button onClick="onClick()">Click</button>
+    <p>Clicks: <span id="clicks">0</span></p>
+    <script>
+    var count=0;
+
+    function onClick() {
+      const clicks=document.getElementById("clicks");
+      count+=1;
+      clicks.innerHTML=count;
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Increase/Decrease with Reset Counter</title>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <p id="value">0</p>
+    <button onclick="inc()" id="inc">Increase</button>
+    <button onclick="reset()" id="reset">Reset</button>
+    <button onclick="dec()" id="dec">Decrease</button>
+    <script>
+        var counter=0;
+        const value=document.querySelector("#value");
+
+        function inc() {
+            counter+=1;
+            value.innerHTML=counter;
+        }
+        function dec() {
+            counter-=1;
+            value.innerHTML=counter;
+        }
+        function reset() {
+            counter=0;
+            value.innerHTML=counter;
+        }
+    </script>
+  </body>
+</html>

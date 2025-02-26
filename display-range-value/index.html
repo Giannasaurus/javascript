@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Range Value</title>
+    <style>
+        input[type="range"] {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Range Value</h1>
+    <p>Value: <span id="value">50</span></p>
+    <span>0</span>
+    <input type="range" id="slider" min="0" max="100" value="50">
+    <span>100</span>
+    <script>
+        const slider=document.querySelector('#slider');
+        const newValue=document.querySelector('#value');
+
+        /*slider.addEventListener('input', updateValue);
+        
+        function updateValue() {
+            newValue.innerHTML=slider.value;
+        };
+
+        arrow function version*/
+        slider.addEventListener('input', updateValue = () => {
+            newValue.innerHTML=slider.value;
+        })
+    </script>
+</body>
+</html>

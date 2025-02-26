@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Range Value</title>
+</head>
+<body>
+    <h1>Input Range Value</h1>
+    <span>Value</span>
+    <input type="number" id="inputValue" value="100"> <br><br>
+    <span>0</span>
+    <input type="range" id="slider" min="0" max="500" value="100">
+    <span>500</span>
+    <script>
+        const slider=document.querySelector('#slider');
+        const inputValue=document.querySelector('#inputValue');
+
+        // INPUT->SLIDER
+        inputValue.addEventListener('change', whenTheSliderMovesDependingOnTheNewValue);
+        // 'input' for real-time changes
+        function whenTheSliderMovesDependingOnTheNewValue() {
+            slider.value=inputValue.value;
+            // IT WORKED!!!1 STAY FRIED GUYS
+        }
+
+        // SLIDER->INPUT
+        slider.addEventListener('input', whenTheValueUpdatesDependingOnTheSlider);
+        function whenTheValueUpdatesDependingOnTheSlider() {
+            inputValue.value=slider.value;
+        }
+    </script>
+</body>
+</html>
